@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ko's adversary printer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div id="search-area" class="screen-only">
+        <input id="search" type="search" placeholder="Search adversaries..." autocomplete="off">
+        <ul id="suggestions"></ul>
+        <button id="clear-selection" type="button">Clear</button>
+    </div>
+    <main id="selected-adversaries"></main>
+    <script src="./script.js"></script>
+    <script src="./adversaries.js"></script>
+</body>
+</html>

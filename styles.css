@@ -1,0 +1,134 @@
+@page {
+    size: A4 landscape;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 110%;
+}
+
+body {
+    background-color: #fff;
+    font-family: "Overpass", sans-serif;
+    font-size: 8pt;
+}
+
+#search-area {
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 20px;
+    font-size: 12pt;
+}
+
+#search {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    font: inherit;
+    background: white;
+}
+
+#suggestions {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 100%;
+    list-style: none;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #888;
+    border-top: 0;
+    background: white;
+    z-index: 100;
+}
+
+#suggestions:empty {
+    display: none;
+}
+
+#suggestions li {
+    display: block;
+}
+
+#suggestions button {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    border: 0;
+    background: white;
+    text-align: left;
+    font: inherit;
+    cursor: pointer;
+}
+
+#suggestions button:hover,
+#suggestions button:focus {
+    background: #eee;
+}
+
+#clear-selection {
+    margin-top: 10px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+#selected-adversaries {
+    column-count: 3;
+    column-gap: 0;
+}
+
+div.adversary-statblock {
+    position: relative;
+    break-inside: avoid;
+    width: 99mm;
+    float: left;
+    padding: 3mm;
+}
+
+div.adversary-statblock .label {
+    font-weight: 800;
+}
+
+div.adversary-statblock .label::after {
+    content: ": ";
+}
+
+div.adversary-statblock h1 {
+    font-size: 10pt;
+    margin-bottom: 2mm;
+}
+
+.markbox {
+    display: inline-block;
+    border: 1px black solid;
+    width: 1em;
+    height: 1em;
+    box-sizing: border-box;
+}
+
+
+.remove-adversary {
+    margin-top: 2mm;
+    padding: 4px 7px;
+    border: 1px solid #aaa;
+    background: #eee;
+    font-size: 8pt;
+    cursor: pointer;
+}
+
+@media print {
+    .screen-only {
+        display: none !important;
+    }
+    body {
+        margin: 0;
+    }
+}
